@@ -2,4 +2,4 @@
 
 To test...
 
-`pytest`
+`ppython3 -m unittest`
