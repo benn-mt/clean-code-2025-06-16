@@ -13,3 +13,13 @@ class TestUnit(unittest.TestCase):
         self.assertEqual(UNIT1.amountInBaseUnit(4), 12)
         UNIT2 = Unit(2)
         self.assertEqual(UNIT2.amountInBaseUnit(3), 6)
+
+    def test_can_calculate_amount_in_relative_unit(self):
+        myBaseUnit = Unit()
+        myNextUnit = Unit(2,myBaseUnit)
+        myThirdUnit = Unit(3, myNextUnit)
+        self.assertEqual(myBaseUnit.amountInUnit(1, myBaseUnit), 1)
+        self.assertEqual(myBaseUnit.amountInUnit(4, myNextUnit), 2)
+        self.assertEqual(myNextUnit.amountInUnit(3, myBaseUnit), 6)
+        self.assertEqual(myThirdUnit.amountInUnit(1, myBaseUnit), 6)
+        self.assertEqual(myThirdUnit.amountInUnit(1, myNextUnit), 3)
