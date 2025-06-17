@@ -1,5 +1,7 @@
+from src.Measurement.unit import Unit
+
 class Quantity:
-    def __init__(self, amount, unit):
+    def __init__(self, amount: float, unit: Unit):
         self._amount = amount
         self._unit = unit
 

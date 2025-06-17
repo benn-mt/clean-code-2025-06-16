@@ -1,3 +1,5 @@
+from src.Measurement.unit import Unit
+
 class Volume:
-    TEASPOON = object()
-    TABLESPOON = object()
+    TEASPOON = Unit()
+    TABLESPOON = Unit()
