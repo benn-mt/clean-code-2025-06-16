@@ -16,7 +16,8 @@ class Chance:
         return Chance(self._likelihood * other._likelihood)
     
     def or_(self, other):
-        return Chance(self._likelihood + other._likelihood - (self.and_(other)._likelihood))
+        # return Chance(self._likelihood + other._likelihood - (self.and_(other)._likelihood))
+        return self.not_().and_(other.not_()).not_()
     
     def __repr__(self):
      return "Chance(%.10f)" % self._likelihood

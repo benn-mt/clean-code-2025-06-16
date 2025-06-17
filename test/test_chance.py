@@ -26,6 +26,8 @@ class TestChance(unittest.TestCase):
     def test_can_be_combined_with_or(self):
         self.assertEqual(CERTAIN.or_(CERTAIN), CERTAIN)
         self.assertEqual(FIFTY_FIFTY.or_(FIFTY_FIFTY), Chance(0.75))
+        self.assertEqual(FIFTY_FIFTY.or_(CERTAIN), CERTAIN)
+        self.assertEqual(IMPOSSIBLE.or_(FIFTY_FIFTY), FIFTY_FIFTY)
 
 
 if __name__ == '__main__':
