@@ -4,7 +4,7 @@ class Quantity:
         self._unit = unit
 
     def __eq__(self, other):
-        return False
+        return self._amount == other._amount and self._unit == other._unit
     
     def __repr__(self):
      return f"Quantity({self._amount} {self._unit}) "
