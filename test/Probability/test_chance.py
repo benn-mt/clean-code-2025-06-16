@@ -1,5 +1,5 @@
 import unittest
-from src.chance import Chance
+from src.Probability.chance import Chance
 
 CERTAIN = Chance(1)
 IMPOSSIBLE = Chance(0)
