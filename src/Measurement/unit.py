@@ -7,9 +7,6 @@ class Unit:
         if (relativeUnit):
             self._ratioToBaseUnit = self._ratioToBaseUnit * relativeUnit._ratioToBaseUnit
             self._baseUnit = relativeUnit._baseUnit
-
-    def amountInBaseUnit(self, amount):
-        return amount * self._ratioToBaseUnit
     
     def amountInUnit(self, amount, otherUnit):
         return amount * self._ratioToBaseUnit / otherUnit._ratioToBaseUnit
