@@ -7,3 +7,5 @@ class TestQuantity(unittest.TestCase):
         self.assertEqual(Quantity(1, Volume.TEASPOON),Quantity(1, Volume.TEASPOON))
         self.assertNotEqual(Quantity(2, Volume.TEASPOON),Quantity(1, Volume.TEASPOON))
         self.assertNotEqual(Quantity(1, Volume.TEASPOON),Quantity(1, Volume.TABLESPOON))
+        
+        self.assertEqual(Quantity(1, Volume.TABLESPOON), Quantity(3, Volume.TEASPOON))

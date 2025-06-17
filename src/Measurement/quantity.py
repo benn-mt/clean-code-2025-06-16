@@ -6,7 +6,7 @@ class Quantity:
         self._unit = unit
 
     def __eq__(self, other):
-        return self._amount == other._amount and self._unit == other._unit
+        return self._unit.amountInBaseUnit(self._amount) == other._unit.amountInBaseUnit(other._amount)
     
     def __repr__(self):
      return f"Quantity({self._amount} {self._unit}) "
