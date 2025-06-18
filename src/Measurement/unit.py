@@ -10,6 +10,9 @@ class Unit:
     
     def amountInUnit(self, amount, otherUnit):
         return amount * self._ratioToBaseUnit / otherUnit._ratioToBaseUnit
+    
+    def isCompatibleWith(self, other):
+        return self._baseUnit == other._baseUnit
 
     def s(self, amount):
         return Quantity(amount, self)
